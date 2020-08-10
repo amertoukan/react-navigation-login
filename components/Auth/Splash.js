@@ -64,3 +64,15 @@ const styles = StyleSheet.create({
         color: "#1A1A1A"
     }
 })
+
+//LOGIN_SUCCESS action flips 
+//state.auth.isAuthenticated to true
+//this splash watches 
+
+const mapStateToProps = ({auth}) => {
+    return {
+        authenticated: auth.isAuthenticated
+    }
+}
+
+export default connect(mapStateToProps, {initializeApp}) (Splash)
